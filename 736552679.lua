@@ -510,7 +510,7 @@ function InstanceObject:Render()
 		return;
 	end
 
-	local world = getPivot(instance):Position;
+	local world = getPivot(instance).Position;
 	local position, visible, depth = worldToScreen(world);
 	if options.limitDistance and depth > options.maxDistance then
 		visible = false;
